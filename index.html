@@ -29,12 +29,21 @@
   <p class="author">Books by Michael Borck</p>
 </section>
 
-<div class="section-title">The Methodology</div>
+<div class="filters" role="tablist" aria-label="Filter books by track">
+  <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+  <button class="filter" data-filter="methodology" role="tab" aria-selected="false">Methodology</button>
+  <button class="filter" data-filter="business" role="tab" aria-selected="false">Business Education</button>
+  <button class="filter" data-filter="python" role="tab" aria-selected="false">Python Track</button>
+  <button class="filter" data-filter="web" role="tab" aria-selected="false">Web Track</button>
+</div>
 
 <div class="books">
 
-  <div class="card">
-    <span class="badge">Available</span>
+  <div class="card" data-track="methodology">
+    <div class="card-top">
+      <span class="badge">Available</span>
+      <span class="track-label">Methodology</span>
+    </div>
     <h3>Conversation, Not Delegation</h3>
     <div class="subtitle">How to Think With AI, Not Just Use It</div>
     <p>The foundational methodology. Covers the Conversation Loop, the VET framework, cognitive traps, and the principle of AI Last. For anyone who uses AI as a thinking tool.</p>
@@ -45,17 +54,14 @@
     </div>
   </div>
 
-</div>
-
-<div class="section-title">Business Education</div>
-
-<div class="books">
-
-  <div class="card">
-    <span class="badge">Available</span>
+  <div class="card" data-track="business">
+    <div class="card-top">
+      <span class="badge">Available</span>
+      <span class="track-label">Business Education</span>
+    </div>
     <h3>Partner, Don't Police</h3>
     <div class="subtitle">AI in the Business Classroom</div>
-    <p>Applies the Conversation, Not Delegation methodology to business education. Discipline-specific examples across eight fields, process-based assessment design, and practical frameworks for educators.</p>
+    <p>Applies the methodology to business education across eight disciplines. Process-based assessment, AI-resilient design, and practical frameworks for educators.</p>
     <div class="links">
       <a href="https://michael-borck.github.io/partner-dont-police">Read online</a>
       <a href="#">Paperback</a>
@@ -63,17 +69,14 @@
     </div>
   </div>
 
-</div>
-
-<div class="section-title">Python Track</div>
-
-<div class="books">
-
-  <div class="card">
-    <span class="badge">Available</span>
+  <div class="card" data-track="python">
+    <div class="card-top">
+      <span class="badge">Available</span>
+      <span class="track-label">Python Track</span>
+    </div>
     <h3>Converse Python, Partner AI</h3>
     <div class="subtitle">The Python Edition</div>
-    <p>Intentional AI collaboration for programmers. The six-step methodology, structured prompting patterns, debugging and refactoring with AI, and scaling to complex projects.</p>
+    <p>Intentional AI collaboration for programmers. The six-step methodology, structured prompting patterns, and scaling to complex projects.</p>
     <div class="links">
       <a href="https://michael-borck.github.io/converse-python-partner-ai">Read online</a>
       <a href="#">Paperback</a>
@@ -81,41 +84,47 @@
     </div>
   </div>
 
-  <div class="card">
-    <span class="badge coming">Coming soon</span>
+  <div class="card" data-track="python">
+    <div class="card-top">
+      <span class="badge coming">Coming soon</span>
+      <span class="track-label">Python Track</span>
+    </div>
     <h3>Think Python, Direct AI</h3>
     <div class="subtitle">Computational Thinking for Beginners</div>
     <p>Learn to think computationally and direct AI to help you build solutions. For absolute beginners in the age of AI.</p>
     <div class="links"></div>
   </div>
 
-  <div class="card">
-    <span class="badge coming">Coming soon</span>
+  <div class="card" data-track="python">
+    <div class="card-top">
+      <span class="badge coming">Coming soon</span>
+      <span class="track-label">Python Track</span>
+    </div>
     <h3>Code Python, Consult AI</h3>
     <div class="subtitle">Python Fundamentals for the AI Era</div>
-    <p>Fundamental Python with AI integration. A focused introduction to Python for those who want to build practical skills alongside AI tools.</p>
+    <p>Fundamental Python with AI integration. A focused introduction for those who want practical skills alongside AI tools.</p>
     <div class="links"></div>
   </div>
 
-  <div class="card">
-    <span class="badge coming">Coming soon</span>
+  <div class="card" data-track="python">
+    <div class="card-top">
+      <span class="badge coming">Coming soon</span>
+      <span class="track-label">Python Track</span>
+    </div>
     <h3>Ship Python, Orchestrate AI</h3>
     <div class="subtitle">Professional Python in the AI Era</div>
-    <p>Build professional-grade Python applications with modern tools. uv, ruff, mypy, pytest. Simple but not simplistic.</p>
+    <p>Professional-grade Python with modern tools. uv, ruff, mypy, pytest. Simple but not simplistic.</p>
     <div class="links"></div>
   </div>
 
-</div>
-
-<div class="section-title">Web Track</div>
-
-<div class="books">
-
-  <div class="card">
-    <span class="badge coming">Coming soon</span>
+  <div class="card" data-track="web">
+    <div class="card-top">
+      <span class="badge coming">Coming soon</span>
+      <span class="track-label">Web Track</span>
+    </div>
     <h3>Build Web, Guide AI</h3>
     <div class="subtitle">Business Web Development with AI</div>
-    <p>A practical guide to modern web development that embraces AI as your development partner while building real business solutions.</p>
+    <p>Modern web development with AI as your development partner. Build real business solutions with practical guidance.</p>
     <div class="links"></div>
   </div>
 
@@ -129,6 +138,31 @@
     <a href="https://github.com/michael-borck">GitHub</a>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('.filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+
+    const track = btn.dataset.filter;
+    document.querySelectorAll('.card').forEach(card => {
+      if (track === 'all' || card.dataset.track === track) {
+        card.style.display = '';
+        requestAnimationFrame(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; });
+      } else {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(8px)';
+        setTimeout(() => { card.style.display = 'none'; }, 200);
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>

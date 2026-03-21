@@ -11,7 +11,6 @@
   --gray-6:   #111114;
   --black:    #0a0a0b;
 
-  /* Green accent (distinct from .dev gold and .education cyan) */
   --accent-low:  #052e16;
   --accent:      #22c55e;
   --accent-high: #bbf7d0;
@@ -72,7 +71,7 @@ header nav a.nav-link:hover { color: var(--white); text-decoration: none; }
 /* ── Hero ───────────────────────────────────────── */
 .hero {
   text-align: center;
-  padding: 5rem 2rem 3rem;
+  padding: 5rem 2rem 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -119,31 +118,37 @@ header nav a.nav-link:hover { color: var(--white); text-decoration: none; }
   position: relative;
 }
 
-/* ── Series Diagram ─────────────────────────────── */
-.series-diagram {
-  max-width: 700px;
-  margin: 0 auto 3rem;
-  padding: 0 2rem;
+/* ── Filter Tabs ────────────────────────────────── */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 2rem 2rem;
+  flex-wrap: wrap;
 }
 
-.series-diagram pre {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--gray-1);
-  line-height: 1.4;
-  text-align: center;
-  overflow-x: auto;
-}
-
-/* ── Section Headings ───────────────────────────── */
-.section-title {
-  text-align: center;
+.filter {
+  font-family: var(--font);
   font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--gray-2);
-  margin: 3rem 0 1.5rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid var(--gray-4);
+  background: transparent;
+  color: var(--gray-1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter:hover {
+  border-color: var(--gray-2);
+  color: var(--white);
+}
+
+.filter.active {
+  background: var(--accent-low);
+  border-color: var(--accent);
+  color: var(--accent-high);
 }
 
 /* ── Book Grid ──────────────────────────────────── */
@@ -165,7 +170,7 @@ header nav a.nav-link:hover { color: var(--white); text-decoration: none; }
   border: 1px solid var(--gray-4);
   border-radius: var(--radius);
   padding: 1.5rem;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, opacity 0.2s;
   display: flex;
   flex-direction: column;
 }
@@ -173,6 +178,13 @@ header nav a.nav-link:hover { color: var(--white); text-decoration: none; }
 .card:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
 }
 
 .card .badge {
@@ -183,11 +195,18 @@ header nav a.nav-link:hover { color: var(--white); text-decoration: none; }
   border-radius: 9999px;
   background: var(--accent-low);
   color: var(--accent-high);
-  margin-bottom: 0.75rem;
   width: fit-content;
 }
 
 .card .badge.coming { background: var(--gray-3); color: var(--gray-1); }
+
+.card .track-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-2);
+}
 
 .card h3 {
   font-size: 1.15rem;

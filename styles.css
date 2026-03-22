@@ -73,7 +73,6 @@ header nav a.nav-link:hover { color: var(--white); text-decoration: none; }
   text-align: center;
   padding: 5rem 2rem 2rem;
   position: relative;
-  overflow: hidden;
 }
 
 .hero::before {

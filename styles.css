@@ -234,8 +234,15 @@ header nav a.nav-link:hover { color: var(--white); text-decoration: none; }
   flex: 1;
 }
 
+.card .extras {
+  font-size: 0.75rem;
+  color: var(--gray-2);
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
 .card .links {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -244,6 +251,16 @@ header nav a.nav-link:hover { color: var(--white); text-decoration: none; }
 .card .links a {
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+.card .links a.muted {
+  color: var(--gray-2);
+}
+
+.card .links a.muted:hover {
+  color: var(--gray-1);
+  text-decoration: none;
+  cursor: default;
 }
 
 /* ── Footer ─────────────────────────────────────── */

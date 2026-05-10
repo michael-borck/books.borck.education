@@ -60,6 +60,11 @@ header .logo {
 header .logo .dot { color: var(--gray-2); }
 header .logo .tld { color: var(--accent); }
 
+header nav .nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
 header nav a.nav-link {
   color: var(--gray-1);
   font-size: 0.85rem;

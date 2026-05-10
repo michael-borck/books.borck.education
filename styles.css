@@ -62,12 +62,12 @@ header .logo .tld { color: var(--accent); }
 
 header nav .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 header nav a.nav-link {
   color: var(--gray-1);
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 500;
 }
 

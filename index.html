@@ -35,6 +35,7 @@
   <button class="filter" data-filter="business" role="tab" aria-selected="false">Business Education</button>
   <button class="filter" data-filter="python" role="tab" aria-selected="false">Python Track</button>
   <button class="filter" data-filter="web" role="tab" aria-selected="false">Web Track</button>
+  <button class="filter" data-filter="security" role="tab" aria-selected="false">Security</button>
   <button class="filter" data-filter="reference" role="tab" aria-selected="false">Reference</button>
 </div>
 
@@ -70,6 +71,34 @@
     </div>
   </div>
 
+  <div class="card" data-track="methodology">
+    <div class="card-top">
+      <span class="badge">Available</span>
+      <span class="track-label">Methodology</span>
+    </div>
+    <h3>Prove, Don't Persuade</h3>
+    <div class="subtitle">Why Proof Beats the Demo in Applied AI</div>
+    <p>Anyone can demo AI. This book teaches the discipline of proving it works: state what good enough means before you measure, measure honestly, name who the system fails, and decide how much human oversight it needs. Built around the fictional Tessera engagement.</p>
+    <div class="links">
+      <a href="https://michael-borck.github.io/prove-dont-persuade">Read online</a>
+      <a href="https://github.com/michael-borck/prove-dont-persuade">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card" data-track="methodology">
+    <div class="card-top">
+      <span class="badge coming">In development</span>
+      <span class="track-label">Methodology</span>
+    </div>
+    <h3>Speak Software</h3>
+    <div class="subtitle">Programming at the Natural-Language Layer</div>
+    <p>Programming has moved up a level: you describe, an agent builds, and you decide whether it is true. Specification, guardrails, and verification for people who will never write code by hand, and for the programmers whose job is becoming this.</p>
+    <div class="links">
+      <a href="https://michael-borck.github.io/programming-labs/">Companion labs</a>
+      <a href="https://github.com/michael-borck/speak-software">GitHub</a>
+    </div>
+  </div>
+
   <div class="card" data-track="business">
     <div class="card-top">
       <span class="badge">Available</span>
@@ -81,6 +110,20 @@
     <div class="links">
       <a href="https://michael-borck.github.io/partner-dont-police">Read online</a>
       <a href="https://www.amazon.com.au/dp/B0GVHV54RS">Amazon</a>
+    </div>
+  </div>
+
+  <div class="card" data-track="business">
+    <div class="card-top">
+      <span class="badge coming">In development</span>
+      <span class="track-label">Business Education</span>
+    </div>
+    <h3>The Human Edge</h3>
+    <div class="subtitle">Using AI with Judgement</div>
+    <p>Everyone has the same AI tools now. The edge is judgement. Four tools for briefing, trusting, checking, and delivering AI-assisted work, from the Curtin Executive Education masterclass. For professionals in any role, no code required.</p>
+    <div class="links">
+      <a href="https://michael-borck.github.io/the-human-edge/">The masterclass</a>
+      <a href="https://github.com/michael-borck/the-human-edge-using">GitHub</a>
     </div>
   </div>
 
@@ -140,6 +183,20 @@
     </div>
   </div>
 
+  <div class="card" data-track="python">
+    <div class="card-top">
+      <span class="badge coming">In development</span>
+      <span class="track-label">Python Track</span>
+    </div>
+    <h3>Build AI, Understand AI</h3>
+    <div class="subtitle">How Modern AI Systems Actually Work, in Small Readable Pieces</div>
+    <p>Strip away the dashboards and every AI system you use is one call to a model, wrapped in plain Python. Build each piece in miniature — chat, retrieval, tools, loops, judges, voice — and know which parts of a demo were the model and which were the harness.</p>
+    <div class="links">
+      <a href="https://michael-borck.github.io/hands-on-ai/">Companion package</a>
+      <a href="https://github.com/michael-borck/build-ai-understand-ai">GitHub</a>
+    </div>
+  </div>
+
   <div class="card" data-track="web">
     <div class="card-top">
       <span class="badge">Available</span>
@@ -151,6 +208,20 @@
     <div class="links">
       <a href="https://michael-borck.github.io/build-web-guide-ai">Read online</a>
       <a href="https://www.amazon.com.au/dp/B0GW8PMVDQ">Amazon</a>
+    </div>
+  </div>
+
+  <div class="card" data-track="security">
+    <div class="card-top">
+      <span class="badge">Available</span>
+      <span class="track-label">Security</span>
+    </div>
+    <h3>Assume Breach</h3>
+    <div class="subtitle">A First Course in Defensive Security</div>
+    <p>A security control can fail. Design detection, containment, and recovery in from the start. A first course in defensive judgement: assets, threats, layered controls, and a defender's dossier you build chapter by chapter. No security background required.</p>
+    <div class="links">
+      <a href="https://michael-borck.github.io/assume-breach">Read online</a>
+      <a href="https://github.com/michael-borck/assume-breach">GitHub</a>
     </div>
   </div>
 
@@ -196,6 +267,15 @@ document.querySelectorAll('.filter').forEach(btn => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(8px)';
         setTimeout(() => { card.style.display = 'none'; }, 200);
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+none'; }, 200);
       }
     });
   });

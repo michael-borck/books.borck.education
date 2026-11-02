@@ -26,8 +26,36 @@
 
 <section class="hero">
   <h1>Think with AI, not through it.</h1>
-  <p class="author">Books by Michael Borck</p>
+  <p class="author">Books by Michael Borck · A series on thinking and working with AI</p>
 </section>
+
+<section class="trunk" aria-labelledby="trunk-heading">
+  <div class="trunk-head">
+    <p class="eyebrow">The series has a trunk</p>
+    <h2 id="trunk-heading">Start with the method, then the practice.</h2>
+    <p>Two books name the habits the rest of the series applies. Read them first, or use them as the map when you choose a branch.</p>
+  </div>
+  <div class="trunk-grid">
+    <a class="trunk-card" href="#book-conversation">
+      <span class="trunk-role">01 · The method</span>
+      <h3>Conversation, Not Delegation</h3>
+      <p>How to think with AI, not just use it. The Conversation Loop, VET, and AI Last.</p>
+      <span class="trunk-link">See the method</span>
+    </a>
+    <a class="trunk-card" href="#book-human-edge">
+      <span class="trunk-role">02 · The practice</span>
+      <h3>The Human Edge</h3>
+      <p>Using AI with judgement at work. Trust, brief, check, deliver.</p>
+      <span class="trunk-link">See the practice</span>
+    </a>
+  </div>
+  <p class="trunk-note">The trunk was named after the branches grew. The books below apply the same habits to code, web, security, teaching, evidence and building with agents.</p>
+</section>
+
+<div class="browse-head">
+  <h2>Browse the branches</h2>
+  <p>The full catalogue. Start with the trunk above, or follow the track that fits your work.</p>
+</div>
 
 <div class="filters" role="tablist" aria-label="Filter books by track">
   <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
@@ -43,7 +71,7 @@
 
 <div class="books">
 
-  <div class="card" data-track="methodology">
+  <div class="card" data-track="methodology" id="book-conversation">
     <div class="card-top">
       <span class="badge">Available</span>
       <span class="track-label">Methodology</span>
@@ -113,7 +141,7 @@
     </div>
   </div>
 
-  <div class="card" data-track="business">
+  <div class="card" data-track="business" id="book-human-edge">
     <div class="card-top">
       <span class="badge coming">In development</span>
       <span class="track-label">Business Education</span>
@@ -271,13 +299,10 @@ document.querySelectorAll('.filter').forEach(btn => {
     });
   });
 });
-</script>
 
-</body>
-</html>
-none'; }, 200);
-      }
-    });
+document.querySelectorAll('.trunk-card').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.filter[data-filter="all"]').click();
   });
 });
 </script>

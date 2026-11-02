@@ -21,6 +21,10 @@
   --radius:    12px;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
 body {
   font-family: var(--font);
   background: var(--black);
@@ -41,7 +45,7 @@ a:hover { text-decoration: underline; }
   position: sticky; top: 0; z-index: 10;
 }
 .topbar-logo {
-  font-family: var(--mono); font-size: 0.88rem; font-weight: 700;
+  font-family: var(--font-mono); font-size: 0.88rem; font-weight: 700;
   text-decoration: none; color: var(--white); white-space: nowrap;
 }
 .topbar-logo .dot { color: var(--gray-2); }
@@ -101,6 +105,127 @@ a:hover { text-decoration: underline; }
   font-size: 0.9rem;
   margin-top: 0.5rem;
   position: relative;
+}
+
+/* ── Trunk ──────────────────────────────────────── */
+.trunk {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.trunk-head {
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.trunk-head h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.trunk-head p {
+  color: var(--gray-1);
+  font-size: 0.95rem;
+}
+
+.trunk-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 760px) {
+  .trunk-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.trunk-card {
+  display: block;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid var(--gray-3);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--gray-5), var(--gray-6));
+  color: var(--white);
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.trunk-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.trunk-role {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.trunk-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.35rem;
+}
+
+.trunk-card p {
+  color: var(--gray-1);
+  font-size: 0.88rem;
+  margin-bottom: 0.9rem;
+}
+
+.trunk-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.trunk-note {
+  max-width: 760px;
+  margin: 1.25rem auto 0;
+  text-align: center;
+  color: var(--gray-2);
+  font-size: 0.78rem;
+}
+
+.browse-head {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.browse-head h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.browse-head p {
+  color: var(--gray-2);
+  font-size: 0.82rem;
+}
+
+.card {
+  scroll-margin-top: 64px;
 }
 
 /* ── Filter Tags ─────────────────────────────────── */

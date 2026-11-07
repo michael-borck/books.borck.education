@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>books.borck.education</title>
-  <meta name="description" content="Books by Michael Borck on AI collaboration, intentional prompting, and modern software development.">
+  <meta name="description" content="Books by Michael Borck on AI collaboration, data, security, education and modern software development.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -29,283 +29,137 @@
   <p class="author">Books by Michael Borck · A series on thinking and working with AI</p>
 </section>
 
-<section class="trunk" aria-labelledby="trunk-heading">
-  <div class="trunk-head">
-    <p class="eyebrow">The series has a trunk</p>
-    <h2 id="trunk-heading">Start with the method, then the practice.</h2>
-    <p>Two books name the habits the rest of the series applies. Read them first, or use them as the map when you choose a branch.</p>
+<section class="books-shelf" aria-labelledby="shelf-heading">
+  <div class="shelf-head">
+    <p class="eyebrow">The books</p>
+    <h2 id="shelf-heading">Four books. One argument.</h2>
+    <p>Each is standalone and independently complete. Read one, or follow the trail.</p>
   </div>
-  <div class="trunk-grid">
-    <a class="trunk-card" href="#book-conversation">
-      <span class="trunk-role">01 · The method</span>
-      <h3>Conversation, Not Delegation</h3>
-      <p>How to think with AI, not just use it. The Conversation Loop, VET, and AI Last.</p>
-      <span class="trunk-link">See the method</span>
+  <div class="shelf-grid">
+
+    <a class="book-card feature" href="https://michael-borck.github.io/conversation-not-delegation">
+      <div class="book-spine method-spine"></div>
+      <div class="book-body">
+        <span class="book-role">Book 1 · The method</span>
+        <h3>Conversation,<br>Not Delegation</h3>
+        <div class="book-subtitle">How to Think With AI, Not Just Use It</div>
+        <p>The foundational methodology. The Conversation Loop, VET, cognitive traps, and AI Last.</p>
+        <div class="book-links">
+          <span>Read online</span>
+          <span>Amazon · ISBN 979-8-2528-2455-0</span>
+        </div>
+      </div>
     </a>
-    <a class="trunk-card" href="#book-human-edge">
-      <span class="trunk-role">02 · The practice</span>
-      <h3>The Human Edge</h3>
-      <p>Using AI with judgement at work. Trust, brief, check, deliver.</p>
-      <span class="trunk-link">See the practice</span>
+
+    <a class="book-card feature" href="https://michael-borck.github.io/the-human-edge-using">
+      <div class="book-spine practice-spine"></div>
+      <div class="book-body">
+        <span class="book-role">Book 2 · The practice</span>
+        <h3>The Human Edge</h3>
+        <div class="book-subtitle">Using AI with Judgement</div>
+        <p>Trust, brief, check, deliver. Professional judgement for everyday work when everyone has the same tools.</p>
+        <div class="book-links">
+          <span>Read online</span>
+          <span>Amazon · ISBN 979-8-2542-3619-1</span>
+        </div>
+      </div>
     </a>
+
+    <a class="book-card feature" href="https://michael-borck.github.io/speak-software">
+      <div class="book-spine build-spine"></div>
+      <div class="book-body">
+        <span class="book-role">Book 3 · The build</span>
+        <h3>Speak Software</h3>
+        <div class="book-subtitle">Programming at the Natural-Language Layer</div>
+        <p>You describe, an agent builds, and you decide whether it is true. Specification, guardrails, and verification.</p>
+        <div class="book-links">
+          <span>Read online</span>
+          <span>Companion labs</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="book-card feature" href="https://michael-borck.github.io/model-data-verify-ai">
+      <div class="book-spine data-spine"></div>
+      <div class="book-body">
+        <span class="book-role">Book 4 · The data</span>
+        <h3>Model Data,<br>Verify AI</h3>
+        <div class="book-subtitle">Relational Design and SQL in the AI Era</div>
+        <p>Model the data, prove the queries, change the schema without gambling. The data layer when AI writes the SQL.</p>
+        <div class="book-links">
+          <span>Read online</span>
+          <span>Docker lab</span>
+        </div>
+      </div>
+    </a>
+
   </div>
-  <p class="trunk-note">The trunk was named after the branches grew. The books below apply the same habits to code, web, security, teaching, evidence and building with agents.</p>
 </section>
 
-<div class="browse-head">
-  <h2>Browse the branches</h2>
-  <p>The full catalogue. Start with the trunk above, or follow the track that fits your work.</p>
-</div>
-
-<div class="filters" role="tablist" aria-label="Filter books by track">
-  <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
-  <button class="filter" data-filter="methodology" role="tab" aria-selected="false">Methodology</button>
-  <button class="filter" data-filter="business" role="tab" aria-selected="false">Business Education</button>
-  <button class="filter" data-filter="python" role="tab" aria-selected="false">Python Track</button>
-  <button class="filter" data-filter="web" role="tab" aria-selected="false">Web Track</button>
-  <button class="filter" data-filter="security" role="tab" aria-selected="false">Security</button>
-  <button class="filter" data-filter="reference" role="tab" aria-selected="false">Reference</button>
-</div>
-
-<p class="global-extras">Every online edition includes a chatbot, PDF, EPUB, and llm.txt downloads.</p>
-
-<div class="books">
-
-  <div class="card" data-track="methodology" id="book-conversation">
-    <div class="card-top">
-      <span class="badge">Available</span>
-      <span class="track-label">Methodology</span>
-    </div>
-    <h3>Conversation, Not Delegation</h3>
-    <div class="subtitle">How to Think With AI, Not Just Use It</div>
-    <p>The foundational methodology. Covers the Conversation Loop, the VET framework, cognitive traps, and the principle of AI Last. For anyone who uses AI as a thinking tool.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/conversation-not-delegation">Read online</a>
-      <a href="https://www.amazon.com.au/dp/B0GTF9F4Q2">Amazon</a>
-    </div>
+<section class="companions" aria-labelledby="companions-heading">
+  <div class="companions-head">
+    <p class="eyebrow">The companions</p>
+    <h2 id="companions-heading">Follow the trail into a domain.</h2>
+    <p>Each companion applies the books to a specific craft or discipline. Read the book first, then the companion that fits.</p>
   </div>
+  <div class="companion-groups">
 
-  <div class="card" data-track="methodology">
-    <div class="card-top">
-      <span class="badge">Available</span>
-      <span class="track-label">Methodology</span>
+    <div class="companion-group">
+      <h3 class="group-label">Programming</h3>
+      <div class="companion-list">
+        <a href="https://michael-borck.github.io/think-python-direct-ai">Think Python, Direct AI</a>
+        <a href="https://michael-borck.github.io/code-python-consult-ai">Code Python, Consult AI</a>
+        <a href="https://michael-borck.github.io/converse-python-partner-ai">Converse Python, Partner AI</a>
+        <a href="https://michael-borck.github.io/ship-python-orchestrate-ai">Ship Python, Orchestrate AI</a>
+        <a href="https://michael-borck.github.io/build-ai-understand-ai">Build AI, Understand AI</a>
+        <a href="https://michael-borck.github.io/programming-paradigms">One Calculator, Three Paradigms</a>
+        <a href="https://minimum.borck.education">The Absolute Minimum <span class="free-tag">free</span></a>
+      </div>
     </div>
-    <h3>Substantiate, Don't Assume</h3>
-    <div class="subtitle">Why the Auditor's Opinion Matters More Than Ever in the Age of AI</div>
-    <p>Information security auditing as a discipline of judgement. Twelve weekly topics from risk to certification, audited against ISO/IEC 27001:2022. When AI can draft the technical work, the auditor's defensible opinion is the whole point. Built around a live, simulated audit engagement.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/substantiate-dont-assume">Read online</a>
-      <a href="https://tessera.locoensayo.org">Tessera companion site</a>
+
+    <div class="companion-group">
+      <h3 class="group-label">Security &amp; networking</h3>
+      <div class="companion-list">
+        <a href="https://michael-borck.github.io/assume-breach">Assume Breach</a>
+        <a href="https://michael-borck.github.io/break-with-permission">Break with Permission</a>
+        <a href="https://michael-borck.github.io/follow-the-packet">Follow the Packet</a>
+        <a href="https://michael-borck.github.io/follow-the-trace">Follow the Trace, Prove the Case</a>
+        <a href="https://michael-borck.github.io/netsim-field-guide">Build the Network, Watch It Run</a>
+        <a href="https://securitytoys.borck.education">Security Toys <span class="free-tag">free</span></a>
+      </div>
     </div>
+
+    <div class="companion-group">
+      <h3 class="group-label">Education &amp; evidence</h3>
+      <div class="companion-list">
+        <a href="https://michael-borck.github.io/partner-dont-police">Partner, Don't Police</a>
+        <a href="https://michael-borck.github.io/build-it-teach-it">Build It, Teach It</a>
+        <a href="https://aitoys.borck.education">AI Toys <span class="free-tag">free</span></a>
+        <a href="https://michael-borck.github.io/prove-dont-persuade">Prove, Don't Persuade</a>
+        <a href="https://michael-borck.github.io/substantiate-dont-assume">Substantiate, Don't Assume</a>
+        <a href="https://michael-borck.github.io/test-the-claim">Test the Claim, Rate the Control</a>
+      </div>
+    </div>
+
+    <div class="companion-group">
+      <h3 class="group-label">Systems &amp; philosophy</h3>
+      <div class="companion-list">
+        <a href="https://michael-borck.github.io/frame-the-system-guide-ai">Frame the System, Guide the AI</a>
+        <a href="https://michael-borck.github.io/simulate-it">Simulate It, Understand It</a>
+        <a href="https://michael-borck.github.io/the-great-silence">The Great Silence <span class="free-tag">free</span></a>
+      </div>
+    </div>
+
   </div>
-
-  <div class="card" data-track="methodology">
-    <div class="card-top">
-      <span class="badge">Available</span>
-      <span class="track-label">Methodology</span>
-    </div>
-    <h3>Prove, Don't Persuade</h3>
-    <div class="subtitle">Why Proof Beats the Demo in Applied AI</div>
-    <p>Anyone can demo AI. This book teaches the discipline of proving it works: state what good enough means before you measure, measure honestly, name who the system fails, and decide how much human oversight it needs. Built around the fictional Tessera engagement.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/prove-dont-persuade">Read online</a>
-      <a href="https://github.com/michael-borck/prove-dont-persuade">GitHub</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="methodology">
-    <div class="card-top">
-      <span class="badge coming">In development</span>
-      <span class="track-label">Methodology</span>
-    </div>
-    <h3>Speak Software</h3>
-    <div class="subtitle">Programming at the Natural-Language Layer</div>
-    <p>Programming has moved up a level: you describe, an agent builds, and you decide whether it is true. Specification, guardrails, and verification for people who will never write code by hand, and for the programmers whose job is becoming this.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/programming-labs/">Companion labs</a>
-      <a href="https://github.com/michael-borck/speak-software">GitHub</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="business">
-    <div class="card-top">
-      <span class="badge">Available</span>
-      <span class="track-label">Business Education</span>
-    </div>
-    <h3>Partner, Don't Police</h3>
-    <div class="subtitle">AI in the Business Classroom</div>
-    <p>Applies the methodology to business education across eight disciplines. Process-based assessment, AI-resilient design, and practical frameworks for educators.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/partner-dont-police">Read online</a>
-      <a href="https://www.amazon.com.au/dp/B0GVHV54RS">Amazon</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="business" id="book-human-edge">
-    <div class="card-top">
-      <span class="badge coming">In development</span>
-      <span class="track-label">Business Education</span>
-    </div>
-    <h3>The Human Edge</h3>
-    <div class="subtitle">Using AI with Judgement</div>
-    <p>Everyone has the same AI tools now. The edge is judgement. Four tools for briefing, trusting, checking, and delivering AI-assisted work, from the Curtin Executive Education masterclass. For professionals in any role, no code required.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/the-human-edge/">The masterclass</a>
-      <a href="https://github.com/michael-borck/the-human-edge-using">GitHub</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="python">
-    <div class="card-top">
-      <span class="badge">Available</span>
-      <span class="track-label">Python Track</span>
-    </div>
-    <h3>Converse Python, Partner AI</h3>
-    <div class="subtitle">The Intentional Prompting Methodology</div>
-    <p>Intentional AI collaboration for programmers. The six-step methodology, two-chat workflow, structured prompting patterns, and scaling to complex projects.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/converse-python-partner-ai">Read online</a>
-      <a href="https://www.amazon.com.au/dp/B0GVN9JTN4">Amazon</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="python">
-    <div class="card-top">
-      <span class="badge">Available</span>
-      <span class="track-label">Python Track</span>
-    </div>
-    <h3>Think Python, Direct AI</h3>
-    <div class="subtitle">Computational Thinking for Beginners</div>
-    <p>Learn to think computationally and direct AI to help you build solutions. Twelve projects from temperature converters to GUI applications. For absolute beginners.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/think-python-direct-ai">Read online</a>
-      <a href="https://www.amazon.com.au/dp/B0GVT2KHVX">Amazon</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="python">
-    <div class="card-top">
-      <span class="badge">Available</span>
-      <span class="track-label">Python Track</span>
-    </div>
-    <h3>Code Python, Consult AI</h3>
-    <div class="subtitle">Python Fundamentals for the AI Era</div>
-    <p>Learn Python through AI conversation, not textbook explanations. Every chapter uses the two-chat method: explore the concept, then build with it. For anyone who has used AI to write code and wants to understand what it produces.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/code-python-consult-ai">Read online</a>
-      <a href="https://www.amazon.com.au/dp/B0GW5TWPC6">Amazon</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="python">
-    <div class="card-top">
-      <span class="badge">Available</span>
-      <span class="track-label">Python Track</span>
-    </div>
-    <h3>Ship Python, Orchestrate AI</h3>
-    <div class="subtitle">Professional Python in the AI Era</div>
-    <p>One opinionated development pipeline. uv, ruff, mypy, pytest. Project structure, CI/CD, multi-platform distribution. The infrastructure that makes AI a force multiplier.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/ship-python-orchestrate-ai">Read online</a>
-      <a href="https://www.amazon.com.au/dp/B0GW8Q5SS1">Amazon</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="python">
-    <div class="card-top">
-      <span class="badge coming">In development</span>
-      <span class="track-label">Python Track</span>
-    </div>
-    <h3>Build AI, Understand AI</h3>
-    <div class="subtitle">How Modern AI Systems Actually Work, in Small Readable Pieces</div>
-    <p>Strip away the dashboards and every AI system you use is one call to a model, wrapped in plain Python. Build each piece in miniature — chat, retrieval, tools, loops, judges, voice — and know which parts of a demo were the model and which were the harness.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/hands-on-ai/">Companion package</a>
-      <a href="https://github.com/michael-borck/build-ai-understand-ai">GitHub</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="web">
-    <div class="card-top">
-      <span class="badge">Available</span>
-      <span class="track-label">Web Track</span>
-    </div>
-    <h3>Build Web, Guide AI</h3>
-    <div class="subtitle">Business Web Development with AI</div>
-    <p>Web development as a decision-making skill. HTML, CSS, JavaScript, WordPress, and React. Learn when to use each one, not just how. Concept before code, AI as exploration partner.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/build-web-guide-ai">Read online</a>
-      <a href="https://www.amazon.com.au/dp/B0GW8PMVDQ">Amazon</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="security">
-    <div class="card-top">
-      <span class="badge">Available</span>
-      <span class="track-label">Security</span>
-    </div>
-    <h3>Assume Breach</h3>
-    <div class="subtitle">A First Course in Defensive Security</div>
-    <p>A security control can fail. Design detection, containment, and recovery in from the start. A first course in defensive judgement: assets, threats, layered controls, and a defender's dossier you build chapter by chapter. No security background required.</p>
-    <div class="links">
-      <a href="https://michael-borck.github.io/assume-breach">Read online</a>
-      <a href="https://github.com/michael-borck/assume-breach">GitHub</a>
-    </div>
-  </div>
-
-  <div class="card" data-track="reference">
-    <div class="card-top">
-      <span class="badge">Free online</span>
-      <span class="track-label">Reference</span>
-    </div>
-    <h3>The Absolute Minimum You Must Know</h3>
-    <div class="subtitle">One-Page Fundamentals for the AI Era</div>
-    <p>The free reference companion. One-page chapters on Linux, Git, Python, objects, testing, and data — each ending with how to direct an AI at the topic and a wrong AI answer to catch. Every example is a doctest verified by CI.</p>
-    <div class="links">
-      <a href="https://minimum.borck.education">Read online</a>
-      <a href="https://github.com/michael-borck/the-absolute-minimum-you-must-know">GitHub</a>
-    </div>
-  </div>
-
-</div>
+</section>
 
 <footer class="site-footer">
   <div class="footer-links">
     <a href="https://borck.dev">borck.dev</a>
+    <a href="https://bigpicture.borck.dev">The big picture</a>
   </div>
   <p>Michael Borck · Perth, WA · <a href="mailto:hello@borck.dev">hello@borck.dev</a></p>
 </footer>
-
-<script>
-document.querySelectorAll('.filter').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter').forEach(b => {
-      b.classList.remove('active');
-      b.setAttribute('aria-selected', 'false');
-    });
-    btn.classList.add('active');
-    btn.setAttribute('aria-selected', 'true');
-
-    const track = btn.dataset.filter;
-    document.querySelectorAll('.card').forEach(card => {
-      if (track === 'all' || card.dataset.track === track) {
-        card.style.display = '';
-        requestAnimationFrame(() => { card.style.opacity = '1'; card.style.transform = 'translateY(0)'; });
-      } else {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(8px)';
-        setTimeout(() => { card.style.display = 'none'; }, 200);
-      }
-    });
-  });
-});
-
-document.querySelectorAll('.trunk-card').forEach(link => {
-  link.addEventListener('click', () => {
-    document.querySelector('.filter[data-filter="all"]').click();
-  });
-});
-</script>
 
 </body>
 </html>
